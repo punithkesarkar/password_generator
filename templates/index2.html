@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+
+<html>
+<meta name=”viewport” content=”width=device-width, initial-scale=1″>
+<meta name="title" content="Canada Covid-19 Coronavirus Daily Statistics ">
+<meta name="description" content="Canada Covid-19 Coronavirus Daily Statistics ">
+<meta name="keywords" content="canada covid-19, canada coronavirus, canada covid-19 stats, quebec coronavirus stats, quebec covid19 stats, toronto coronavirus stats, toronto covid19 stats">
+<meta name="robots" content="index, follow">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="language" content="English">
+
+<head>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-165912496-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-165912496-1');
+</script>
+
+<link rel="apple-touch-icon" sizes="180x180" href="/static/img/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/static/img/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/static/img/favicon-16x16.png">
+<link rel="manifest" href="/static/img/site.webmanifest">
+
+
+<title>COVID-19 Canada Dashboard</title>
+
+<!--import script files needed from plotly and bootstrap-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT" crossorigin="anonymous"></script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+</head>
+
+<body>
+
+<!--navbar links-->     
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+   <a class="navbar-brand" href="#">COVID-19 Canada Dashboard</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" 
+  data-target="#navbarTogglerDemo02" 
+  aria-controls="navbarTogglerDemo02" aria-expanded="false" 
+  aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+    <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+      <li class="nav-item">
+        <a class="nav-link" href="https://covid19api.com/">COVID-19 API</a>
+      </li>
+      <li class="nav-item">  
+        <a class="nav-link" href="https://www.who.int/">WHO</a>
+      </li>
+       <li class="nav-item">  
+        <a class="nav-link" href="https://www.cdc.gov/oralhealth/infectioncontrol/guidelines/index.htm">CDC Guidelines</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<!--middle section-->       
+<div class="row">
+
+    <!--social media buttons column-->      
+    <div class="col-1 border-right">
+        <div id="follow-me" class="mt-3">
+            <a href="https://www.linkedin.com/in/punith-kesarkar-8771611b/">
+                <img src="/static/img/linkedinlogo.png" alt="linkedin" class="img-fluid mb-4 ml-2">
+            </a>
+            <a href="https://github.com/punithkesarkar">
+                <img src="/static/img/githublogo.png" alt="github" class="img-fluid ml-2">
+            </a>
+        </div>
+    </div>
+
+    <!--visualizations column-->        
+    <div class="col-11">
+
+        <!--chart descriptions-->       
+        <div id="middle-info" class="mt-3">
+
+            <h2 id="tag-line">COVID-19 Canada Dashboard</h2>
+            <h4 id="tag-line" class="text-muted">Canadian Stats</h4>
+            
+        </div>
+        
+        <!--charts-->       
+        <div id="charts" class="container mt-3 text-center">
+                    
+            <!--top two charts-->       
+            <div class="row">
+                <div class="col-6">
+                    <div id="{{ids[0]}}"></div>
+                </div>
+                <div class="col-6">
+                    <div id="{{ids[1]}}"></div>
+                </div>
+            </div>
+
+            <!--bottom two charts-->        
+            <div class="row">
+                <div class="col-6"> 
+                    <div id="chart3">
+                        <div id="{{ids[2]}}"></div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div id="chart4">
+                        <div id="{{ids[3]}}"></div>
+                    </div>
+                <div>
+            </div>
+			
+        
+        </div>
+    <div>
+</div>
+<!-- start sw-rss-feed code --> 
+<script type="text/javascript"> 
+<!-- 
+rssfeed_url = new Array(); 
+rssfeed_url[0]="https://www.google.com/alerts/feeds/04153124861525338835/17536448051677454399";  
+rssfeed_frame_width="800"; 
+rssfeed_frame_height="400"; 
+rssfeed_scroll="on"; 
+rssfeed_scroll_step="6"; 
+rssfeed_scroll_bar="off"; 
+rssfeed_target="_blank"; 
+rssfeed_font_size="12"; 
+rssfeed_font_face=""; 
+rssfeed_border="on"; 
+rssfeed_css_url="https://feed.surfing-waves.com/css/style4.css"; 
+rssfeed_title="off"; 
+rssfeed_title_name=""; 
+rssfeed_title_bgcolor="#3366ff"; 
+rssfeed_title_color="#fff"; 
+rssfeed_title_bgimage=""; 
+rssfeed_footer="off"; 
+rssfeed_footer_name="rss feed"; 
+rssfeed_footer_bgcolor="#fff"; 
+rssfeed_footer_color="#333"; 
+rssfeed_footer_bgimage=""; 
+rssfeed_item_title_length="50"; 
+rssfeed_item_title_color="#666"; 
+rssfeed_item_bgcolor="#fff"; 
+rssfeed_item_bgimage=""; 
+rssfeed_item_border_bottom="on"; 
+rssfeed_item_source_icon="off"; 
+rssfeed_item_date="off"; 
+rssfeed_item_description="on"; 
+rssfeed_item_description_length="120"; 
+rssfeed_item_description_color="#666"; 
+rssfeed_item_description_link_color="#333"; 
+rssfeed_item_description_tag="off"; 
+rssfeed_no_items="0"; 
+rssfeed_cache = "dd24269c83148653b4c350ea365f835c"; 
+//--> 
+</script> 
+<script type="text/javascript" src="//feed.surfing-waves.com/js/rss-feed.js"></script> 
+<!-- The link below helps keep this service FREE, and helps other people find the SW widget. Please be cool and keep it! Thanks. --> 
+<div style="color:#ccc;font-size:10px; text-align:right; width:800px;">powered by <a href="https://surfing-waves.com" rel="noopener" target="_blank" style="color:#ccc;">Surfing Waves</a></div> 
+<!-- end sw-rss-feed code -->
+<!--footer section-->               
+<div id="footer" class="container"></div>
+
+</body>
+
+
+<footer>
+
+    <script type="text/javascript">
+        // plots the figure with id
+        // id much match the div id above in the html
+        var figures = {{figuresJSON | safe}};
+        var ids = {{ids | safe}};
+        for(var i in figures) {
+            Plotly.plot(ids[i],
+                figures[i].data,
+                figures[i].layout || {});
+        }
+    </script>
+    
+</footer>
+
+
+</html>
